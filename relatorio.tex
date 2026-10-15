@@ -1,0 +1,133 @@
+\documentclass[11pt,openright,oneside,a4paper,brazil,english]{abntex2}
+
+% --- PACOTES ESSENCIAIS ---
+\usepackage[utf8]{inputenc}        % Acentuação direta
+\usepackage[T1]{fontenc}           % Seleção de fontes
+\usepackage{graphicx}              % Inclusão de imagens
+\usepackage{amsmath,amssymb}       % Símbolos e fórmulas matemáticas
+\usepackage[alf]{abntex2cite}      % Citações bibliográficas padrão ABNT
+
+
+
+% --- METADADOS DO DOCUMENTO ---
+\titulo{Título do Relatório de Laboratório}
+\autor{Nome 1\\
+Nome 2\\
+Nome 3\\
+Nome 4}
+\local{Rio de Janeiro - RJ}
+\data{data do relatório}
+\instituicao{ CEFET/RJ - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca}
+
+% Informações do pdf
+\makeatletter
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    pdftitle={\@title}, 
+	pdfauthor={\@author},
+    pdfsubject={\imprimirpreambulo},
+    pdfkeywords={abnt}{latex}{abntex}{abntex2}{relatório de laboratório}
+}
+
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+
+
+% --- Refazendo a capa ---
+\renewcommand{\imprimircapa}{%
+    \begin{capa}%
+        \center
+        {\ABNTEXchapterfont\Large\imprimirinstituicao\par}
+        \vspace{0.8cm}
+
+        {\ABNTEXchapterfont\large\imprimirautor\par}
+        \vfill
+
+        {\ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo\par}
+        \vfill
+
+        {\ABNTEXchapterfont\large\imprimirlocal\par}
+        {\ABNTEXchapterfont\large\imprimirdata\par}
+    \end{capa}%
+}
+
+\begin{document}
+% Seleciona o idioma do documento (conforme pacotes do babel)
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% Gera a capa padrão ABNT
+\imprimircapa
+
+\begin{resumo}
+Aqui é o resumo do experimento, onde você deve colocar o objetivo do experimento, os resultados obtidos e a conclusão. O resumo deve ser escrito em um único parágrafo, com no máximo 250 palavras.
+\end{resumo}
+
+% As seções a seguir apenas devem ser incluídas caso existam os elementos que elas se referem.
+% ---
+% inserir lista de ilustrações
+% ---
+%\pdfbookmark[0]{\listfigurename}{lof}
+%\listoffigures*
+%\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+%\pdfbookmark[0]{\listtablename}{lot}
+%\listoftables*
+%\cleardoublepage
+% ---
+
+% Sumário
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+
+% Início do texto principal
+\textual
+
+%Capitulo destinado a introduzir o experimento, 
+%onde você deve colocar o objetivo do experimento, 
+%os resultados obtidos e a conclusão. 
+%O resumo deve ser escrito em um único parágrafo, com no máximo 250 palavras.
+
+\chapter{Introdução}
+
+% Nessa parte devemos colocar os:
+% - Materias usados;
+% - Métodos usados;
+% - Téses e hipóteses;
+\part{Preparação para o experimento}
+
+% Nessa parte devemos colocar os:
+% - Processos de execução do experimento;
+% - Resultados obtidos;
+% - Confrontamento dos resultados obtidos com os resultados esperados;
+\part{Execução e observação dos resultados experimentais}
+
+% Nessa parte devemos colocar os:
+% - Respostas às questões do relatório;
+\part{Respostas às questões do relatório}
+
+\end{document}

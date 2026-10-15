@@ -46,6 +46,6 @@ Após preparar o ambiente, basta apenas clona esse repositório no seu computado
 
 ## Dúvidas
 
-Em caso de dúvidas mande um email para [araujojv04@yahoo.com](emailto:araujojv04@yahoo.com?subject=Duvida%20no%20uso%20do%20repositorio%20Estrutura_de_relatorio)
+Em caso de dúvidas mande um email para [araujojv04@yahoo.com](mailto:araujojv04@yahoo.com?subject=Ajuda%20com%20o%20repositorio%20para%20relatorios)
 
 #### Created by file_manager
